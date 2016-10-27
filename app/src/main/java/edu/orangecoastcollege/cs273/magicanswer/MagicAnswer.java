@@ -29,6 +29,8 @@ public class MagicAnswer {
      */
     public String getRandomAnswer() {
         Random rng = new Random();
+        // Reason it is not mAllAnswers.length - 1 is because nextInt() function doesn't include
+        // the value (it takes the value before it)
         int randomPosition = rng.nextInt(mAllAnswers.length);
         return mAllAnswers[randomPosition];
     }
